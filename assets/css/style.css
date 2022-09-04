@@ -2,15 +2,58 @@
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: darkgray;
+}
+
 h1 {
-    font-size: 50px;
+    background-color: lightblue;
+    font-size: 150%;
+    padding: 1%;
 }
 
-li {
-    color:black;
+nav ul {
+    color:lightblue;
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    
 }
 
-nav ul li a {
-    color:black;
+nav a {
+    color:lightblue;
     text-decoration: none;
+    border-bottom: 3px solid lightblue;    
+}
+  
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.about{
+    display: flex;
+    margin-left: 2%;
+}
+
+p {
+    margin-bottom: 10px;
+    border-left: 3px solid darkblue;  
+}
+
+.work {
+    
+}
+
+.contact {
+
+}
+
+.resume {
+
 }
