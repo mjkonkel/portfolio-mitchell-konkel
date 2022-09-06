@@ -1,23 +1,24 @@
 * {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
-
+/*header and nav styles*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: darkgray;
+    background-color: #383330;
 }
 
 h1 {
-    background-color: lightblue;
-    font-size: 150%;
+    background-color: #eba834;
+    color: #383330;
+    font-size: 200%;
     padding: 1%;
 }
 
 nav ul {
-    color:lightblue;
+    color: #eba834;
     display: flex;
     justify-content: space-between;
     min-width: 300px;
@@ -25,35 +26,158 @@ nav ul {
 }
 
 nav a {
-    color:lightblue;
+    color:#eba834;
     text-decoration: none;
-    border-bottom: 3px solid lightblue;    
-}
-  
-
-section {
-    display: flex;
-    flex-direction: column;
+    border-bottom: 3px solid #eba834;   
 }
 
+#nav-links li a {
+    text-decoration: none;
+    color: #eba834;
+    /*height: 3px;*/
+}
+
+#nav-links li a:hover {
+    text-decoration: none;
+    color: #383330;
+    background-color: #eba834;
+    height: 100%;
+    transition: 1s; 
+}
+
+#nav-links li a:hover:after {
+    transition: 1s;
+    height: 3px;
+    background-color: #eba834;
+}
+/*header and nav styles end*/
+
+/*main content styles*/
+/*about styles*/
 .about{
     display: flex;
-    margin-left: 2%;
+    /*margin-left: 2%;*/
+    justify-content: center;
+    padding: 2%;
+}
+
+.about-aside {
+    flex: 1 0 0;
+}
+
+.about-aside h2 {
+    font-size: 200%;
+    text-align: right;
+    padding: 1% 5% 0% 0%;
+    border-right: 3px solid #eba834;
+}
+
+.about-div {
+    flex: 4 0 0;
 }
 
 p {
     margin-bottom: 10px;
-    border-left: 3px solid darkblue;  
+    /*border-left: 3px solid #eba834;*/
+    padding-left: 1%; 
 }
 
-.work {
-    
+/*work styles*/
+.work{
+    display: flex;
+    /*margin-left: 2%;*/
+    justify-content: center;
+    padding: 2%;
 }
 
+.work-aside {
+    flex: 1 0 0;
+}
+
+.work-aside h2 {
+    font-size: 200%;
+    text-align: end;
+    padding: 1% 5% 0% 0%;
+}
+
+.work-div {
+    flex: 4 0 0;
+}
+
+
+.image-stop {
+    display: flex;
+    flex-direction: row;
+    background-image:url(../images/stop-sign1.jpg);
+    width: 100%;
+    height: auto;   
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border: 5px solid #383330;
+    margin: 2%;
+    color: #eba834;
+}
+
+
+.work img {
+    margin: 2%;
+    border: 5px solid #383330;
+    width: 75%;
+    height: auto;
+}
+
+.work img:hover {
+    opacity: .5;
+
+}
+
+.work-images {
+
+}
+
+
+/*contact styles*/
 .contact {
-
+    display: flex;
 }
 
+.contact ul{
+    display: flex;
+    justify-content: space-around;
+    min-width: 300px;
+}
+
+/*resume styles*/
 .resume {
 
 }
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+
+    .about h2 {
+        text-align: center;
+    }
+    /*
+    @media screen and (min-width:400px) {
+        head {
+            flex-wrap: wrap;
+        }
+    }
+    */
+}
+
