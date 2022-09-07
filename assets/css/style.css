@@ -18,38 +18,27 @@ h1 {
 }
 
 nav ul {
-    color: #eba834;
     display: flex;
     justify-content: space-between;
     min-width: 300px;
     
 }
 
-nav a {
-    color:#eba834;
-    text-decoration: none;
-    border-bottom: 3px solid #eba834;   
-}
-
 #nav-links li a {
-    text-decoration: none;
     color: #eba834;
-    /*height: 3px;*/
-}
-
-#nav-links li a:hover {
     text-decoration: none;
+    transition: 0.25s ease-in;
+    background-image: linear-gradient(#eba834, #eba834);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+  }
+  
+  #nav-links li a:hover {
+    background-size: 100% 100%;
     color: #383330;
-    background-color: #eba834;
-    height: 100%;
-    transition: 1s; 
-}
+  }
 
-#nav-links li a:hover:after {
-    transition: 1s;
-    height: 3px;
-    background-color: #eba834;
-}
 /*header and nav styles end*/
 
 /*main content styles*/
@@ -63,13 +52,14 @@ nav a {
 
 .about-aside {
     flex: 1 0 0;
+    border-right: 3px solid #eba834;
 }
 
 .about-aside h2 {
     font-size: 200%;
-    text-align: right;
+    /* text-align: right; */
     padding: 1% 5% 0% 0%;
-    border-right: 3px solid #eba834;
+    width: 10px;
 }
 
 .about-div {
@@ -78,7 +68,6 @@ nav a {
 
 p {
     margin-bottom: 10px;
-    /*border-left: 3px solid #eba834;*/
     padding-left: 1%; 
 }
 
@@ -92,6 +81,7 @@ p {
 
 .work-aside {
     flex: 1 0 0;
+    border-right: 3px solid #eba834;
 }
 
 .work-aside h2 {
@@ -120,20 +110,45 @@ p {
     color: #eba834;
 }
 
+.image-tree {
+    display: flex;
+    flex-direction: row;
+    background-image:url(../images/hardwood-tree.jpg);
+    width: 100%;
+    height: auto;   
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border: 5px solid #383330;
+    margin: 2%;
+    color: #eba834;
+}
 
-.work img {
+.image-bucket {
+    display: flex;
+    flex-direction: row;
+    background-image:url(../images/bucket.jpg);
+    width: 100%;
+    height: auto;   
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border: 5px solid #383330;
+    margin: 2%;
+    color: #eba834;
+}
+
+.work figure {
     margin: 2%;
     border: 5px solid #383330;
-    width: 75%;
+    width: 80%;
     height: auto;
 }
 
-.work img:hover {
+.work figure:hover {
     opacity: .5;
-
-}
-
-.work-images {
 
 }
 
@@ -171,7 +186,12 @@ p {
 
     .about h2 {
         text-align: center;
+        width: 100%;
+        border-bottom: 3px solid #eba834;
+        border-right: 0px;
+        
     }
+
     /*
     @media screen and (min-width:400px) {
         head {
