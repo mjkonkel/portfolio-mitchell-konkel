@@ -1,12 +1,13 @@
 * {
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
+
 /*header and nav styles*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    padding: 1% 1% 1% 0;
     background-color: #383330;
 }
 
@@ -15,6 +16,8 @@ h1 {
     color: #383330;
     font-size: 200%;
     padding: 1%;
+    width: 300px;
+    text-align: end;
 }
 
 nav ul {
@@ -56,8 +59,7 @@ nav ul {
 
 .image {
     height: 175px;
-    /* border-radius: 25px; */
-    margin-left: 45%;
+    margin-left: 110px;
     border: 3px solid #383330;    
 }
 
@@ -65,15 +67,18 @@ nav ul {
     color: #eba834;
     background-color: #383330;
     font-size: 175%;
-    margin-right: 25%;
+    margin-right: 50px;
+    position: relative;
+    top: 70px;
+    width: fit-content;
+    padding: 4px;
 }
+/* banner and profile image styles end */
 
 /*main content styles*/
-
 /*about styles*/
 .about{
     display: flex;
-    /*margin-left: 2%;*/
     justify-content: center;
     padding: 2%;
 }
@@ -81,6 +86,7 @@ nav ul {
 .about-title {
     flex: 1 0 0;
     border-right: 3px solid #eba834;
+
 }
 
 .about-title h2 {
@@ -88,6 +94,7 @@ nav ul {
     padding: 1% 5% 0% 0%;
     display: flex;
     justify-content: flex-end;
+    text-align: right;
 }
 
 .about-div {
@@ -99,9 +106,9 @@ p {
     padding-left: 1%; 
     width: 85%;
 }
+/*about styles end*/
 
 /*work styles*/
-
 .work{
     display: flex;
     padding: 2%;
@@ -125,7 +132,6 @@ p {
 .work figure {
     margin: 5px;
     border: 5px solid #383330;
-    /* width: 300px; */
     opacity: .7;
 }
 
@@ -133,12 +139,12 @@ p {
     opacity: 1;
 }
 
+/* large figure styles */
 .stopsign {
     display: flex;
     height: 500px;
     justify-content: center;
     width: 90%;
-
 }
 
 .figure-stop {
@@ -160,14 +166,10 @@ p {
     width: fit-content;
 }
 
-
+/* small figure styles */
 .small-figs {
     display: flex;
     width: 90%;
-    flex-wrap: wrap;
-    height: 220px;
-    flex-direction: column;
-    flex-grow: 1;
 }
 
 .small-caption {
@@ -180,13 +182,14 @@ p {
 }
 
 .figure-tree {
-    background-image:url(../images/hardwood-tree.jpg);
+    background-image:url(../images/tree.jpg);
     background-size: cover;
     background-position: center;
     border: 5px solid #383330;
     margin: 2%;
     color: #eba834;
     min-height: 100px;
+    flex-grow: 1;
 }
 
 .figure-bucket {
@@ -197,6 +200,7 @@ p {
     margin: 2%;
     color: #eba834;
     min-height: 100px;
+    flex-grow: 1;
 }
 
 .figure-horse {
@@ -207,6 +211,7 @@ p {
     margin: 2%;
     color: #eba834;
     min-height: 100px;
+    flex-grow: 1;
 }
 
 .figure-cow {
@@ -217,8 +222,9 @@ p {
     margin: 2%;
     color: #eba834;
     min-height: 100px;
+    flex-grow: 1;
 }
-
+/*work styles end*/
 
 /*contact styles*/
 .contact {
@@ -265,38 +271,103 @@ p {
     background-size: 100% 100%;
     color: #383330;
   }
+/*contact styles end*/
+/*main content styles end*/
 
 /*media queries*/
 @media screen and (max-width: 768px) {
+    /* header and nav styles */
     header {
         flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        padding: 5px;
     }
     
+    h1 {
+        width: fit-content;
+    }
+
+    /* banner styles */
+    .paper {
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .paper-caption {
+        position: relative;
+        top: -50px;
+        left: 25px;
+    }
+
+    .image {
+        position: relative;
+        left: -65px;
+    }
+
+    /* main content styles */
+    /* about styles */
     .about {
         flex-direction: column;
+
+    }
+
+    .about-title {
+        border-right: none;
     }
 
     .about h2 {
-        text-align: center;
         width: 100%;
         border-bottom: 3px solid #eba834;
-    }
-
-    .paper {
         justify-content: center;
     }
 
-    /*
-    @media screen and (min-width:400px) {
-        head {
-            flex-wrap: wrap;
-        }
+    .about-div {
     }
-    */
+
+    /* work styles */
+    .work {
+        flex-direction: column;
+    }
+
+    .work-title {
+        border-right: none;
+    }
+
+    .work h2 {
+        width: 100%;
+        border-bottom: 3px solid #eba834;
+        text-align: center;
+    }
+
+    .small-figs {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stopsign {
+        width: 100%;
+    }
+
+    /* contact styles */
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        border-right: none;
+    }
+
+    .contact h2 {
+        width: 100%;
+        border-bottom: 3px solid #eba834;
+        justify-content: center;        
+    }
+
+    .contact-div ul {
+        flex-direction: column;
+    }   
 }
 
