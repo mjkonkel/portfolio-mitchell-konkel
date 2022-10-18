@@ -148,7 +148,7 @@ p {
 }
 
 .figure-stop {
-    background-image:url(../images/stop-sign1.jpg);
+    background-image:url(../images/bird.JPG);
     min-height: 350px;
     flex-grow: 1;
     background-size: cover;
@@ -164,6 +164,11 @@ p {
     padding: .5% .5% .5% 2% ;
     background-color: #383330;
     width: fit-content;
+}
+
+.bird-link {
+    color: #eba834;
+
 }
 
 /* small figure styles */
