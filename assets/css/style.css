@@ -166,7 +166,12 @@ p {
     width: fit-content;
 }
 
-.project-link {
+.project-link:link {
+    color: #eba834;
+
+}
+
+.project-link:visited {
     color: #eba834;
 
 }
